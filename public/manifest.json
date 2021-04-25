@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Landing Page Builder",
+  "name": "Front-end landing page builder",
   "icons": [
     {
       "src": "favicon.ico",
