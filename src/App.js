@@ -11,7 +11,9 @@ function App() {
   const drop = (e) => {
     e.preventDefault();
     let data = e.dataTransfer.getData("text");
-    e.target.appendChild(document.getElementById(data));
+    let nodeCopy = document.getElementById(data).cloneNode(true);
+    nodeCopy.id = e.target.id;
+    e.target.appendChild(nodeCopy);
   };
 
   return (
