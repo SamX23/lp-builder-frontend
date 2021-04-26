@@ -40,28 +40,28 @@ function App() {
             <button draggable="true" onDragStart={(e) => drag(e)} id="item">
               TEXT
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item2">
               IMAGE
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item3">
               FORM
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item4">
               HTML
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item5">
               BUTTON
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item6">
               DIVIDER
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item7">
               MENU
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item8">
               SOCIAL
             </button>
-            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item9">
               VIDEO
             </button>
           </div>
