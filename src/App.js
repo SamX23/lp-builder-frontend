@@ -1,6 +1,19 @@
 import "./App.css";
 
 function App() {
+  const allowDrop = (e) => {
+    e.preventDefault();
+  };
+  const drag = (e) => {
+    e.dataTransfer.setData("text", e.target.id);
+  };
+
+  const drop = (e) => {
+    e.preventDefault();
+    let data = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(data));
+  };
+
   return (
     <div className="App">
       <div className="lp_menu">
@@ -17,9 +30,41 @@ function App() {
         </div>
       </div>
       <div className="lp_builder">
-        <div className="lp_content"></div>
+        <div
+          className="lp_content"
+          onDrop={(e) => drop(e)}
+          onDragOver={(e) => allowDrop(e)}
+        ></div>
         <div className="lp_block">
-          <div className="block_option"></div>
+          <div className="block_option">
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              TEXT
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              IMAGE
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              FORM
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              HTML
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              BUTTON
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              DIVIDER
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              MENU
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              SOCIAL
+            </button>
+            <button draggable="true" onDragStart={(e) => drag(e)} id="item">
+              VIDEO
+            </button>
+          </div>
           <div className="block_menu">
             <div className="block_menuButton">
               <p>Content</p>
