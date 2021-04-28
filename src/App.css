@@ -18,13 +18,59 @@
   margin: 0 1rem;
 }
 
+.lp_logo {
+  display: flex;
+  gap: 1rem;
+}
+
 .menu_options {
   display: flex;
 }
 
-.menu_options > button {
+.button_Menu {
+  margin-left: 0.5rem;
+}
+
+.utility {
+  margin: 0 !important;
+}
+
+.utility button {
+  border-radius: 0 !important;
+}
+
+.button_Menu button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 2.5rem;
-  margin: 0.1rem;
+  padding: 0.5rem 1rem;
+  border: unset;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+}
+
+.button_Menu img {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.button_saving {
+  background-color: #fc9a31 !important;
+  color: white !important;
+}
+
+.button_templates {
+  background-color: #007bff !important;
+  color: white !important;
+  margin-right: 0.5rem;
+}
+
+.button_utility {
+  background-color: #e1f2f9 !important;
+  color: black !important;
 }
 
 .lp_builder {
