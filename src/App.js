@@ -1,4 +1,5 @@
 import "./App.css";
+import ButtonMenu from "./component/ButtonMenu";
 
 function App() {
   const allowDrop = (e) => {
@@ -19,16 +20,51 @@ function App() {
   return (
     <div className="App">
       <div className="lp_menu">
-        <img src="" alt="logo" />
+        <div className="lp_logo">
+          <img
+            src="https://aplikasi.kirim.email/img/icon-email-builder.svg"
+            alt="logo"
+          />
+          <p>PAGE BUILDER</p>
+        </div>
         <div className="menu_options">
-          <button>TEMPLATES</button>
-          <button>SAVE</button>
-          <button>EXPORT</button>
-          <button>IMPORT</button>
-          <button>PREVIEW</button>
-          <button>SETTINGS</button>
-          <button>PUBLISH</button>
-          <button>CLOSE</button>
+          <ButtonMenu
+            title="TEMPLATES"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+            className="templates"
+          />
+          <ButtonMenu
+            title="SAVE"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+            className="utility"
+          />
+          <ButtonMenu
+            title="EXPORT"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+            className="utility"
+          />
+          <ButtonMenu
+            title="IMPORT"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+            className="utility"
+          />
+          <ButtonMenu
+            title="PREVIEW"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+          />
+          <ButtonMenu
+            title="SETTINGS"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+          />
+          <ButtonMenu
+            title="SAVING"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+            className="saving"
+          />
+          <ButtonMenu
+            title="X"
+            img="https://aplikasi.kirim.email/img/icon-email-template.svg"
+          />
         </div>
       </div>
       <div className="lp_builder">
