@@ -1,121 +1,80 @@
-:root {
-  --primary: rgb(214, 217, 220);
-  --secondary: rgb(249, 249, 249);
+/* canvas boundaries */
+#gjs {
+  border: 3px solid rgb(68, 102, 216);
+  height: 100% !important;
 }
 
-.App {
-  display: grid;
-  grid-template-rows: 3.5rem minmax(80%, 100%);
-  min-height: 100vh;
-  min-width: 700px;
-  background-color: var(--primary);
+/* Theming */
+/* Primary color for the background */
+.gjs-one-bg {
+  background-color: rgb(249, 249, 249);
 }
 
-.lp_menu {
+/* Secondary color for the text color */
+.gjs-two-color {
+  color: rgb(0, 0, 0);
+}
+
+/* Tertiary color for the background */
+.gjs-three-bg {
+  background-color: #5a5281;
+  color: white;
+}
+
+/* Quaternary color for the text color */
+.gjs-four-color,
+.gjs-four-color-h:hover {
+  color: #4e3cf1;
+}
+
+/* Reset some default styling */
+.gjs-cv-canvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gjs-block {
+  width: auto;
+  height: auto;
+  min-height: auto;
+}
+
+.panel__top {
+  padding: 0;
+  width: 100%;
   display: flex;
+  position: initial;
+  justify-content: center;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 1rem;
 }
 
-.lp_logo {
+.panel__basic-actions {
+  position: initial;
+}
+
+.panel__devices {
+  position: initial;
+}
+
+.panel__switcher {
+  position: initial;
+}
+
+.panel__right {
+  flex-basis: 230px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.editor-row {
   display: flex;
-  gap: 1rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  height: 90vh;
 }
 
-.menu_options {
-  display: flex;
-}
-
-.button_Menu {
-  margin-left: 0.5rem;
-}
-
-.utility {
-  margin: 0 !important;
-}
-
-.utility button {
-  border-radius: 0 !important;
-}
-
-.button_Menu button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.5rem;
-  padding: 0.5rem 1rem;
-  border: unset;
-  border-radius: 5px;
-  background-color: #fff;
-  color: black;
-  cursor: pointer;
-}
-
-.button_Menu img {
-  width: 1rem;
-  margin-right: 0.5rem;
-}
-
-.button_saving {
-  background-color: #fc9a31 !important;
-  color: white !important;
-}
-
-.button_templates {
-  background-color: #007bff !important;
-  color: white !important;
-  margin-right: 0.5rem;
-}
-
-.button_utility {
-  background-color: #e1f2f9 !important;
-  color: black !important;
-}
-
-.lp_builder {
-  display: grid;
-  grid-template-columns: minmax(60%, 90%) auto;
-}
-
-.lp_content {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, 5rem);
-  background-color: var(--secondary);
-}
-
-.lp_block {
-  display: grid;
-  grid-template-columns: minmax(10rem, 20rem) 5rem;
-  border-left: 1px solid var(--primary);
-}
-
-.block_option {
-  display: grid;
-  padding: 0.2rem;
-  background-color: var(--secondary);
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  grid-template-rows: repeat(auto-fit, 5rem);
-  column-gap: 0.2rem;
-  row-gap: 0.2rem;
-}
-
-.block_option > button {
-  height: 5rem;
-}
-
-.block_menuButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-  cursor: pointer;
-}
-
-.block_menuButton:hover {
-  background-color: #a8a8a8;
-}
-
-.block_menuButton:active {
-  background-color: var(--secondary);
+.editor-canvas {
+  flex-grow: 1;
 }
