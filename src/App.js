@@ -15,8 +15,6 @@ const App = () => {
       <PanelTop />
       {/* MAIN EDITOR SECTION */}
       <ContentPanel />
-      {/* BLOCKS CHOOSER SECTION */}
-      <div id="blocks"></div>
     </>
   );
 };
