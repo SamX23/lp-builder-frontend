@@ -1,3 +1,10 @@
+:root {
+  --primary: rgb(38, 52, 82);
+  --secondary: rgb(255, 255, 255);
+  --tertiary: rgb(90, 82, 129);
+  --quaternary: rgb(255, 193, 13);
+}
+
 /* canvas boundaries */
 #gjs {
   border: 3px solid rgb(68, 102, 216);
@@ -7,24 +14,24 @@
 /* Theming */
 /* Primary color for the background */
 .gjs-one-bg {
-  background-color: rgb(249, 249, 249);
+  background-color: var(--primary);
 }
 
 /* Secondary color for the text color */
 .gjs-two-color {
-  color: rgb(0, 0, 0);
+  color: var(--secondary);
 }
 
 /* Tertiary color for the background */
 .gjs-three-bg {
-  background-color: #5a5281;
+  background-color: var(--tertiary);
   color: white;
 }
 
 /* Quaternary color for the text color */
 .gjs-four-color,
 .gjs-four-color-h:hover {
-  color: #4e3cf1;
+  color: var(--quaternary);
 }
 
 /* Reset some default styling */
@@ -40,13 +47,23 @@
   min-height: auto;
 }
 
+.lp_logo {
+  margin-left: 1rem;
+  display: flex;
+}
+
+.lp_logo img {
+  object-fit: contain;
+}
+
 .panel__top {
-  padding: 0;
   width: 100%;
+  height: 7.5vh;
   display: flex;
   position: initial;
   justify-content: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .panel__basic-actions {
@@ -72,9 +89,24 @@
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
-  height: 90vh;
+  height: 85vh;
 }
 
 .editor-canvas {
   flex-grow: 1;
+}
+
+.gjs-pn-panel .gjs-resizer-h {
+  background-color: rgba(113, 170, 255, 0.712);
+}
+
+.gjs-blocks-c {
+  height: 7.5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.gjs-pn-btn,
+.gjs-block-label {
+  font-size: 1.3rem;
 }
