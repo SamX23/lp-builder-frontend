@@ -46,14 +46,14 @@ const InitiateEditor = () => {
           buttons: [
             {
               id: "device-desktop",
-              label: "Desktop",
+              label: "<i class='las la-desktop'></i>",
               command: "set-device-desktop",
               active: true,
               togglable: false,
             },
             {
               id: "device-mobile",
-              label: "Mobile",
+              label: "<i class='las la-mobile'></i>",
               command: "set-device-mobile",
               togglable: false,
             },
@@ -164,7 +164,7 @@ const InitiateEditor = () => {
       blocks: [
         {
           id: "section", // id is mandatory
-          label: "<b>Section</b>", // You can use HTML/SVG inside labels
+          label: "<i class='las la-folder'></i>", // You can use HTML/SVG inside labels
           attributes: { class: "gjs-block-section" },
           content: `<section>
           <h1>This is a simple title</h1>
@@ -173,12 +173,12 @@ const InitiateEditor = () => {
         },
         {
           id: "text",
-          label: "Text",
+          label: "<i class='las la-font'></i>",
           content: '<div data-gjs-type="text">Insert your text here</div>',
         },
         {
           id: "image",
-          label: "Image",
+          label: "<i class='las la-image'></i>",
           // Select the component once it's dropped
           select: true,
           // You can pass components as a JSON instead of a simple HTML string,
@@ -203,20 +203,20 @@ const InitiateEditor = () => {
         id: "visibility",
         active: true, // active by default
         className: "btn-toggle-borders",
-        label: "<bold>BLOCK</bold>",
+        label: "<i class='las la-laptop-code'></i>",
         command: "sw-visibility", // Built-in command
       },
       {
         id: "export",
         className: "btn-open-export",
-        label: "CODE",
+        label: "<i class='las la-file-code'></i>",
         command: "export-template",
         context: "export-template", // For grouping context of buttons from the same panel
       },
       {
         id: "show-json",
         className: "btn-show-json",
-        label: "JSON",
+        label: "<i class='las la-code'></i>",
         context: "show-json",
         command(editor) {
           editor.Modal.setTitle("Components JSON")
