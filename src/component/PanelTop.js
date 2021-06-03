@@ -7,7 +7,6 @@ const PanelTop = () => (
       />
     </div>
     <div className="panel__basic-actions"></div>
-    <div className="panel__devices"></div>
     <div className="panel__switcher"></div>
   </div>
 );

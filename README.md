@@ -1,1 +1,3 @@
-## Create a basic drag n drop builder
+## Simple html builder
+
+A simple html landing page builder created using React.
