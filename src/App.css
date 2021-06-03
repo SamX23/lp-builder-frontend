@@ -42,9 +42,15 @@
 }
 
 .gjs-block {
-  width: auto;
-  height: auto;
+  width: 5rem;
+  height: 5rem;
   min-height: auto;
+  border: 1px solid var(--secondary);
+}
+
+.gjs-block .gjs-block-label {
+  margin: auto;
+  font-size: 2rem;
 }
 
 .lp_logo {
@@ -58,7 +64,7 @@
 
 .panel__top {
   width: 100%;
-  height: 7.5vh;
+  height: 10vh;
   display: flex;
   position: initial;
   justify-content: center;
@@ -80,7 +86,7 @@
 }
 
 .panel__right {
-  flex-basis: 230px;
+  flex-basis: 330px;
   position: relative;
   overflow-y: auto;
 }
@@ -90,7 +96,7 @@
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
-  height: 85vh;
+  height: 90vh;
 }
 
 .editor-canvas {
@@ -103,7 +109,6 @@
 }
 
 .gjs-blocks-c {
-  height: 7.5vh;
   justify-content: center;
   align-items: center;
 }
@@ -112,8 +117,7 @@
   margin: 0.2rem;
 }
 
-.gjs-pn-btn,
-.gjs-block-label {
+.gjs-pn-btn {
   font-size: 1.3rem;
 }
 
