@@ -153,6 +153,7 @@
   display: flex;
   align-items: center;
   background-color: var(--tertiary);
+  border-radius: 5px;
 }
 
 .gjs-pn-btn span {
