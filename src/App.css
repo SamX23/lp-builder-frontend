@@ -1,13 +1,13 @@
 :root {
-  --primary: rgb(38, 52, 82);
-  --secondary: rgb(255, 255, 255);
-  --tertiary: rgb(117, 138, 182);
-  --quaternary: rgb(255, 193, 13);
+  --primary: #022e57;
+  --secondary: #fff5fd;
+  --tertiary: #005a8d;
+  --quaternary: #ff96ad;
 }
 
 /* canvas boundaries */
-#gjs {
-  border: 3px solid rgb(68, 102, 216);
+#builder-canvas {
+  border: 1px solid var(--secondary);
   height: 100% !important;
 }
 
@@ -61,15 +61,26 @@
 }
 
 .gjs-block {
-  width: 5rem;
+  display: flex;
+  flex-direction: row;
+  width: 6rem;
   height: 5rem;
   min-height: auto;
   border: 1px solid var(--secondary);
 }
 
+.gjs-block-label {
+  width: 100%;
+}
+
 .gjs-block .gjs-block-label {
   margin: auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.gjs-block .gjs-block-label p {
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
 }
 
 .panel__logo {
@@ -105,12 +116,13 @@
 }
 
 .panel__right {
-  flex-basis: 330px;
+  flex-basis: 370px;
   position: relative;
   overflow-y: auto;
 }
 
 .editor-row {
+  border-top: 1px solid var(--secondary);
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -134,10 +146,17 @@
 
 .gjs-pn-btn {
   margin: 0.2rem;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  width: auto;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--tertiary);
 }
 
-.gjs-pn-btn {
-  font-size: 1.3rem;
+.gjs-pn-btn span {
+  margin-left: 0.5rem;
 }
 
 .editor-canvas-mode {
