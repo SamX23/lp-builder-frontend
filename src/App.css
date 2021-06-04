@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(38, 52, 82);
   --secondary: rgb(255, 255, 255);
-  --tertiary: rgb(90, 82, 129);
+  --tertiary: rgb(117, 138, 182);
   --quaternary: rgb(255, 193, 13);
 }
 
@@ -39,6 +39,25 @@
   top: 0;
   width: 100%;
   height: 100%;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+      45deg,
+      rgb(236, 236, 236) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgb(236, 236, 236) 75%,
+      rgb(236, 236, 236)
+    ),
+    linear-gradient(
+      45deg,
+      rgb(236, 236, 236) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgb(236, 236, 236) 75%,
+      rgb(236, 236, 236)
+    );
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
 .gjs-block {
@@ -64,7 +83,7 @@
 
 .panel__top {
   width: 100%;
-  height: 10vh;
+  min-height: 7vh;
   display: flex;
   position: initial;
   justify-content: center;
@@ -96,7 +115,7 @@
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
-  height: 90vh;
+  height: 93vh;
 }
 
 .editor-canvas {
