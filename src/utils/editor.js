@@ -2,12 +2,12 @@ import grapesjs from "grapesjs";
 
 const InitiateEditor = () => {
   const editor = grapesjs.init({
-    container: "#gjs",
+    container: "#builder-canvas",
     fromElement: true,
-    height: "300px",
+    height: "auto",
     width: "auto",
     storageManager: {
-      id: "gjs-",
+      id: "lpb-",
       type: "local",
       autosave: true,
       autoload: true,
@@ -23,8 +23,8 @@ const InitiateEditor = () => {
           id: "layers",
           el: ".panel__right",
           resizable: {
-            maxDim: 450,
-            minDim: 300,
+            maxDim: 500,
+            minDim: 350,
             tc: 0,
             cl: 1,
             cr: 0,
@@ -96,7 +96,9 @@ const InitiateEditor = () => {
         },
         {
           name: "Desktop",
-          width: "",
+          width: "95%",
+          height: "95%",
+          widthMedia: "1280px",
         },
       ],
     },
@@ -105,21 +107,21 @@ const InitiateEditor = () => {
       blocks: [
         {
           id: "section",
-          label: "<i class='las la-folder'></i>",
+          label: "<i class='las la-folder'></i><p>SECTION</p>",
           attributes: { class: "gjs-block-section" },
           content: `<section>
-          <h1>This is a simple title</h1>
+          <h1>Bismillah</h1>
           <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
         </section>`,
         },
         {
           id: "text",
-          label: "<i class='las la-font'></i>",
+          label: "<i class='las la-heading'></i><p>TEXT</p>",
           content: '<div data-gjs-type="text">Insert your text here</div>',
         },
         {
           id: "image",
-          label: "<i class='las la-image'></i>",
+          label: "<i class='las la-image'></i><p>IMAGE</p>",
           select: true,
           content: { type: "image" },
           activate: true,
@@ -135,7 +137,7 @@ const InitiateEditor = () => {
         {
           name: "Dimension",
           open: false,
-          buildProps: ["width", "min-height", "padding"],
+          buildProps: ["width", "min-height", "padding", "margin"],
           properties: [
             {
               type: "integer",
@@ -150,7 +152,7 @@ const InitiateEditor = () => {
         {
           name: "Extra",
           open: false,
-          buildProps: ["background-color", "box-shadow", "custom-prop"],
+          buildProps: ["background", "background-color", "box-shadow"],
           properties: [
             {
               id: "custom-prop",
@@ -187,20 +189,20 @@ const InitiateEditor = () => {
         id: "visibility",
         active: true,
         className: "btn-toggle-borders",
-        label: "<i class='las la-laptop-code'></i>",
+        label: "<i class='las la-eye'></i><span>PREVIEW</span>",
         command: "sw-visibility",
       },
       {
         id: "export",
         className: "btn-open-export",
-        label: "<i class='las la-file-code'></i>",
+        label: "<i class='las la-file-code'></i><span>CODE</span>",
         command: "export-template",
         context: "export-template",
       },
       {
         id: "show-json",
         className: "btn-show-json",
-        label: "<i class='las la-code'></i>",
+        label: "<i class='las la-code'></i><span>JSON</span>",
         context: "show-json",
         command(editor) {
           editor.Modal.setTitle("Components JSON")
