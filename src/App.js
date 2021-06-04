@@ -7,6 +7,7 @@ import ContentPanel from "./component/ContentPanel";
 const App = () => {
   useEffect(() => {
     InitiateEditor();
+    console.info("Landing Page Builder | Sami Kalammallah");
   }, []);
 
   return (
