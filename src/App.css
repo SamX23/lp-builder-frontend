@@ -72,12 +72,12 @@
   font-size: 2rem;
 }
 
-.lp_logo {
+.panel__logo {
   margin-left: 1rem;
   display: flex;
 }
 
-.lp_logo img {
+.panel__logo img {
   object-fit: contain;
 }
 
