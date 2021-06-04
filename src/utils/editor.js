@@ -106,25 +106,21 @@ const InitiateEditor = () => {
       appendTo: ".blocks-container",
       blocks: [
         {
-          id: "section",
-          label: "<i class='las la-folder'></i><p>SECTION</p>",
-          attributes: { class: "gjs-block-section" },
-          content: `<section>
-          <h1>Bismillah</h1>
-          <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
-        </section>`,
-        },
-        {
-          id: "text",
-          label: "<i class='las la-heading'></i><p>TEXT</p>",
-          content: '<div data-gjs-type="text">Insert your text here</div>',
-        },
-        {
           id: "image",
           label: "<i class='las la-image'></i><p>IMAGE</p>",
           select: true,
           content: { type: "image" },
           activate: true,
+        },
+        {
+          id: "text",
+          label: "<i class='las la-font'></i><p>TEXT</p>",
+          content: '<div data-gjs-type="text">Insert text here</div>',
+        },
+        {
+          id: "heading",
+          label: "<i class='las la-heading'></i><p>HEADING</p>",
+          content: '<h1 data-gjs-type="text">Insert heading here</h1>',
         },
       ],
     },
@@ -177,11 +173,44 @@ const InitiateEditor = () => {
       appendTo: ".styles-container",
     },
   });
-  editor.Panels.addPanel({
+
+  const blockManager = editor.BlockManager;
+  const commands = editor.Commands;
+  const panels = editor.Panels;
+
+  // Adding Blocks
+  blockManager.add("div", {
+    label: "<i class='las la-folder'></i><p>SECTION</p>",
+    content: {
+      tagName: "div",
+      attributes: { class: "gjs-block-section" },
+      style: {
+        height: "300px",
+      },
+      components: [
+        {
+          tagName: "div",
+          content: "Drop your component here.",
+        },
+      ],
+    },
+  });
+  blockManager.add("google-maps", {
+    label: "<i class='las la-map'></i><p>MAPS</p>",
+    content: {
+      type: "map",
+      style: {
+        height: "350px",
+      },
+    },
+  });
+
+  // Adding Panels
+  panels.addPanel({
     id: "panel-top",
     el: ".panel__top",
   });
-  editor.Panels.addPanel({
+  panels.addPanel({
     id: "basic-actions",
     el: ".panel__basic-actions",
     buttons: [
@@ -216,13 +245,15 @@ const InitiateEditor = () => {
       },
     ],
   });
-  editor.Commands.add("set-device-desktop", {
+
+  // Adding Commands
+  commands.add("set-device-desktop", {
     run: (editor) => editor.setDevice("Desktop"),
   });
-  editor.Commands.add("set-device-mobile", {
+  commands.add("set-device-mobile", {
     run: (editor) => editor.setDevice("Mobile"),
   });
-  editor.Commands.add("show-blocks", {
+  commands.add("show-blocks", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row");
     },
@@ -238,7 +269,7 @@ const InitiateEditor = () => {
       lmEl.style.display = "none";
     },
   });
-  editor.Commands.add("show-layers", {
+  commands.add("show-layers", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row");
     },
@@ -254,7 +285,7 @@ const InitiateEditor = () => {
       lmEl.style.display = "none";
     },
   });
-  editor.Commands.add("show-styles", {
+  commands.add("show-styles", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row");
     },
@@ -270,7 +301,7 @@ const InitiateEditor = () => {
       smEl.style.display = "none";
     },
   });
-  editor.Commands.add("show-traits", {
+  commands.add("show-traits", {
     getTraitsEl(editor) {
       const row = editor.getContainer().closest(".editor-row");
       return row.querySelector(".traits-container");
